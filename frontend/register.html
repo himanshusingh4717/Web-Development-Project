@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | Defence Acquisition Intelligence</title>
+
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="register-navbar">
+
+        <a href="index.html" class="logo">
+            DAI<span>.</span>
+        </a>
+
+        <a href="index.html" class="back-home">
+            ← Back to Home
+        </a>
+
+    </header>
+
+
+    <!-- Registration Section -->
+    <main class="register-container">
+
+        <!-- Left Information Panel -->
+        <section class="register-info">
+
+            <p class="info-tag">JOIN THE PLATFORM</p>
+
+            <h1>
+                Create Your
+                <span>Account.</span>
+            </h1>
+
+            <p class="info-description">
+                Get access to a dedicated analytics workspace
+                designed to explore defence acquisition data,
+                understand financial trends and study predictive
+                cost modelling.
+            </p>
+
+            <div class="info-points">
+
+                <div class="info-point">
+                    <span>01</span>
+                    <p>Explore Historical Data</p>
+                </div>
+
+                <div class="info-point">
+                    <span>02</span>
+                    <p>Understand Cost Overruns</p>
+                </div>
+
+                <div class="info-point">
+                    <span>03</span>
+                    <p>Discover Predictive Insights</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Registration Form -->
+        <section class="register-form-section">
+
+            <div class="register-card">
+
+                <div class="register-heading">
+
+                    <div class="register-icon">DAI</div>
+
+                    <p class="form-tag">NEW ACCOUNT</p>
+
+                    <h2>Create Account</h2>
+
+                    <p>Fill in your details to get started.</p>
+
+                </div>
+
+
+                <form id="registerForm">
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+
+                        <label for="fullName">Full Name</label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="email">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="form-group">
+
+                        <label for="password">Password</label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            minlength="8"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+                    <div class="form-group">
+
+                        <label for="confirmPassword">Confirm Password</label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Re-enter your password"
+                            minlength="8"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Terms -->
+                    <div class="terms-group">
+
+                        <label>
+                            <input type="checkbox" id="terms" required>
+                            I agree to the Terms and Conditions.
+                        </label>
+
+                    </div>
+
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="register-button">
+                        Create Account →
+                    </button>
+
+                </form>
+
+
+                <div class="login-link">
+                    Already have an account?
+                    <a href="login.html">Sign In</a>
+                </div>
+
+
+                <div class="register-footer">
+                    DEFENCE ACQUISITION INTELLIGENCE
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="page-footer">
+        © 2026 Defence Acquisition Intelligence | Academic Project
+    </footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

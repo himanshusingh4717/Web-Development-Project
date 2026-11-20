@@ -1,0 +1,689 @@
+
+/* =========================================
+   DEFENCE ACQUISITION INTELLIGENCE
+   Main Website Stylesheet
+========================================= */
+
+/* 1. GLOBAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #081426;
+    color: #f4f6fa;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+:root {
+    --navy: #081426;
+    --navy-light: #10223a;
+    --blue: #55a8f0;
+    --gold: #d6a84b;
+    --white: #f4f6fa;
+    --muted: #a5b2c4;
+}
+
+
+/* 2. NAVIGATION BAR */
+
+.navbar {
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(8, 20, 38, 0.92);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    position: relative;
+    z-index: 10;
+}
+
+.logo,
+.footer-logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span,
+.footer-logo span {
+    color: var(--gold);
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: var(--gold);
+}
+
+.navbar nav .nav-register {
+    padding: 10px 22px;
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    color: var(--gold);
+}
+
+.navbar nav .nav-register:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+
+/* 3. HERO SECTION */
+
+.hero {
+    min-height: 690px;
+    padding: 90px 8%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 55px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 45px 45px;
+    mask-image: linear-gradient(to right, black, transparent);
+    z-index: -1;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(36, 103, 174, 0.12);
+    filter: blur(100px);
+    border-radius: 50%;
+    top: 5%;
+    right: -150px;
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+
+/* 4. SYSTEM STATUS */
+
+.system-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 15px;
+    border: 1px solid rgba(85, 168, 240, 0.25);
+    background: rgba(85, 168, 240, 0.08);
+    color: #8dc7ff;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+.status-dot,
+.mini-dot {
+    width: 8px;
+    height: 8px;
+    background: #56d69b;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(86, 214, 155, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 8px rgba(86, 214, 155, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(86, 214, 155, 0);
+    }
+}
+
+
+/* 5. HERO TEXT */
+
+.tagline {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.12;
+    font-weight: 750;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--gold);
+}
+
+.description {
+    max-width: 570px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+
+/* 6. HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 27px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.btn-primary:hover {
+    background: #edc46e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(214, 168, 75, 0.2);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255,255,255,0.25);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-3px);
+}
+
+
+/* 7. HERO HIGHLIGHTS */
+
+.hero-highlights {
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+    flex-wrap: wrap;
+}
+
+.highlight {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.highlight-number {
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* 8. ANALYTICS VISUAL */
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visual-card {
+    width: 100%;
+    max-width: 470px;
+    padding: 28px;
+    background: linear-gradient(
+        145deg,
+        rgba(20, 43, 70, 0.96),
+        rgba(11, 27, 47, 0.98)
+    );
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 2;
+    transition: 0.35s ease;
+}
+
+.visual-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(85, 168, 240, 0.4);
+}
+
+.visual-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.visual-label {
+    color: var(--blue);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.visual-header h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.live-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #56d69b;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.mini-dot {
+    width: 6px;
+    height: 6px;
+}
+
+
+/* 9. GRAPH */
+
+.graph-container {
+    padding: 20px 15px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 9px;
+}
+
+.graph-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+.graph-period {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.analytics-graph {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.grid-lines line {
+    stroke: rgba(255,255,255,0.09);
+    stroke-width: 1;
+    stroke-dasharray: 4 5;
+}
+
+.chart-line {
+    animation: drawLine 2s ease forwards;
+}
+
+.gold-line {
+    animation-delay: 0.2s;
+}
+
+.blue-line {
+    animation-delay: 0.5s;
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.graph-legend {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.graph-legend span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-gold,
+.legend-blue {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.legend-gold {
+    background: var(--gold);
+}
+
+.legend-blue {
+    background: var(--blue);
+}
+
+
+/* 10. VISUAL STATISTICS */
+
+.visual-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.visual-stat {
+    padding: 17px;
+    background: rgba(255,255,255,0.035);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.stat-icon {
+    color: var(--gold);
+    font-size: 23px;
+}
+
+.visual-stat p {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.visual-stat h4 {
+    font-size: 15px;
+    margin-top: 3px;
+}
+
+.visual-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 22px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    color: #70849e;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.glow-circle {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(85, 168, 240, 0.13);
+    filter: blur(90px);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+/* 11. ABOUT SECTION */
+
+.about {
+    padding: 100px 15%;
+    text-align: center;
+    background: #0b1b30;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.section-tag {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.about h2 {
+    max-width: 750px;
+    margin: 0 auto 22px;
+    font-size: 34px;
+    line-height: 1.3;
+}
+
+.about > p:last-child {
+    max-width: 750px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* 12. FEATURES SECTION */
+
+.features {
+    padding: 85px 8%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    background: var(--navy);
+}
+
+.feature-card {
+    padding: 32px;
+    background: var(--navy-light);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(214,168,75,0.5);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.feature-card > span {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.feature-card h3 {
+    font-size: 19px;
+    margin: 18px 0 12px;
+}
+
+.feature-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* 13. FOOTER */
+
+footer {
+    padding: 30px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #06101e;
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.footer-logo {
+    font-size: 23px;
+}
+
+footer p {
+    color: #8291a5;
+    font-size: 11px;
+    text-align: right;
+}
+
+
+/* 14. RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+
+    .hero-content {
+        max-width: 750px;
+    }
+
+    .hero-visual {
+        margin-top: 20px;
+    }
+
+    .visual-card {
+        max-width: 600px;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .navbar nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 65px 6%;
+        gap: 45px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .hero-highlights {
+        gap: 20px;
+    }
+
+    .visual-card {
+        padding: 18px;
+    }
+
+    .about {
+        padding: 75px 7%;
+    }
+
+    .about h2 {
+        font-size: 27px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 65px 6%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer p {
+        text-align: center;
+    }
+
+    .visual-footer {
+        font-size: 7px;
+    }
+}
+
+
+/* 15. REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

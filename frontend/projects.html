@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Defence Acquisition Intelligence</title>
+
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <div class="logo-icon">D</div>
+
+                <div>
+                    <h2>DAI</h2>
+                    <span>INTELLIGENCE</span>
+                </div>
+            </div>
+
+            <div class="sidebar-menu">
+
+                <p class="menu-heading">MAIN MENU</p>
+
+                <a href="dashboard.html" class="menu-item">
+                    <span>▦</span>
+                    Dashboard
+                </a>
+
+                <a href="projects.html" class="menu-item active">
+                    <span>▤</span>
+                    Projects
+                </a>
+
+                <a href="cost-analysis.html" class="menu-item">
+                    <span>◈</span>
+                    Cost Analysis
+                </a>
+
+                <a href="predictions.html" class="menu-item">
+                    <span>⌁</span>
+                    Predictions
+                </a>
+
+                <a href="reports.html" class="menu-item">
+                    <span>▧</span>
+                    Reports
+                </a>
+
+                <p class="menu-heading secondary-heading">SYSTEM</p>
+
+                <a href="#" class="menu-item">
+                    <span>⚙</span>
+                    Settings
+                </a>
+
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-status"></div>
+                <span>System Preview</span>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div class="page-heading">
+                    <p>ACQUISITION MANAGEMENT</p>
+                    <h1>Projects</h1>
+                </div>
+
+                <div class="topbar-right">
+
+                    <span class="preview-label">DEMO PREVIEW</span>
+
+                    <div class="profile">
+                        <div class="profile-avatar">A</div>
+
+                        <div class="profile-info">
+                            <h4>Administrator</h4>
+                            <span>Project Analyst</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- WELCOME -->
+
+            <section class="welcome-section">
+
+                <div>
+                    <p class="welcome-label">PROJECT DATABASE</p>
+
+                    <h2>Acquisition Project Registry</h2>
+
+                    <p>
+                        Explore project records, compare financial
+                        performance and monitor acquisition progress.
+                    </p>
+                </div>
+
+                <div class="welcome-icon">◈</div>
+
+            </section>
+
+
+            <!-- PROJECT SUMMARY -->
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <span>Total Projects</span>
+                    <h2>128</h2>
+                    <p>Sample records</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>High Risk</span>
+                    <h2>24</h2>
+                    <p>Illustrative classification</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>Ongoing Projects</span>
+                    <h2>42</h2>
+                    <p>Sample records</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>Completed</span>
+                    <h2>86</h2>
+                    <p>Sample records</p>
+                </div>
+
+            </section>
+
+
+            <!-- PROJECT TABLE -->
+
+            <section class="projects-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>All Projects</h2>
+                        <p>Illustrative acquisition project records</p>
+                    </div>
+
+                </div>
+
+
+                <!-- SEARCH AND FILTER -->
+
+                <div class="filter-bar">
+
+                    <input
+                        type="text"
+                        id="projectSearch"
+                        placeholder="Search projects..."
+                    >
+
+                    <select id="riskFilter">
+
+                        <option value="all">All Risk Levels</option>
+                        <option value="high">High Risk</option>
+                        <option value="medium">Medium Risk</option>
+                        <option value="low">Low Risk</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TABLE -->
+
+                <div class="table-container">
+
+                    <table id="projectsTable">
+
+                        <thead>
+
+                            <tr>
+                                <th>PROJECT NAME</th>
+                                <th>CATEGORY</th>
+                                <th>INITIAL BUDGET</th>
+                                <th>ACTUAL COST</th>
+                                <th>OVERRUN</th>
+                                <th>RISK LEVEL</th>
+                                <th>STATUS</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Aircraft Modernisation</td>
+                                <td>Aerospace</td>
+                                <td>₹500 Cr</td>
+                                <td>₹620 Cr</td>
+                                <td class="overrun">24%</td>
+                                <td><span class="risk high">High</span></td>
+                                <td><span class="status ongoing">Ongoing</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Naval Systems Upgrade</td>
+                                <td>Naval</td>
+                                <td>₹320 Cr</td>
+                                <td>₹350 Cr</td>
+                                <td class="overrun">9.4%</td>
+                                <td><span class="risk medium">Medium</span></td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Defence Communication</td>
+                                <td>Technology</td>
+                                <td>₹180 Cr</td>
+                                <td>₹185 Cr</td>
+                                <td class="overrun">2.8%</td>
+                                <td><span class="risk low">Low</span></td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Radar Development</td>
+                                <td>Electronics</td>
+                                <td>₹250 Cr</td>
+                                <td>₹315 Cr</td>
+                                <td class="overrun">26%</td>
+                                <td><span class="risk high">High</span></td>
+                                <td><span class="status ongoing">Ongoing</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Military Vehicle Upgrade</td>
+                                <td>Land Systems</td>
+                                <td>₹150 Cr</td>
+                                <td>₹162 Cr</td>
+                                <td class="overrun">8%</td>
+                                <td><span class="risk medium">Medium</span></td>
+                                <td><span class="status ongoing">Ongoing</span></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                    <p id="noResults" class="no-results">
+                        No matching projects found.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer class="dashboard-footer">
+
+                <p>© 2026 Defence Acquisition Intelligence</p>
+
+                <p>Academic Project | Projects Preview</p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- SEARCH AND FILTER JAVASCRIPT -->
+
+    <script>
+
+        const searchInput = document.getElementById("projectSearch");
+        const riskFilter = document.getElementById("riskFilter");
+        const projectRows = document.querySelectorAll("#projectsTable tbody tr");
+        const noResults = document.getElementById("noResults");
+
+        function filterProjects() {
+
+            const searchValue = searchInput.value.toLowerCase();
+            const selectedRisk = riskFilter.value;
+
+            let visibleCount = 0;
+
+            projectRows.forEach(function (row) {
+
+                const projectName = row.cells[0].textContent.toLowerCase();
+                const category = row.cells[1].textContent.toLowerCase();
+                const risk = row.cells[5].textContent.trim().toLowerCase();
+
+                const matchesSearch =
+                    projectName.includes(searchValue) ||
+                    category.includes(searchValue);
+
+                const matchesRisk =
+                    selectedRisk === "all" || risk === selectedRisk;
+
+                if (matchesSearch && matchesRisk) {
+
+                    row.style.display = "";
+                    visibleCount++;
+
+                } else {
+
+                    row.style.display = "none";
+
+                }
+
+            });
+
+            noResults.style.display =
+                visibleCount === 0 ? "block" : "none";
+
+        }
+
+        searchInput.addEventListener("input", filterProjects);
+        riskFilter.addEventListener("change", filterProjects);
+
+    </script>
+
+</body>
+</html>

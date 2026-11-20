@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cost Analysis | Defence Acquisition Intelligence</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/cost-analysis.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <div class="logo-icon">D</div>
+
+                <div>
+                    <h2>DAI</h2>
+                    <span>INTELLIGENCE</span>
+                </div>
+            </div>
+
+            <div class="sidebar-menu">
+
+                <p class="menu-heading">MAIN MENU</p>
+
+                <a href="dashboard.html" class="menu-item">
+                    <span>▦</span>
+                    Dashboard
+                </a>
+
+                <a href="projects.html" class="menu-item">
+                    <span>▤</span>
+                    Projects
+                </a>
+
+                <a href="cost-analysis.html" class="menu-item active">
+                    <span>◈</span>
+                    Cost Analysis
+                </a>
+
+                <a href="predictions.html" class="menu-item">
+                    <span>⌁</span>
+                    Predictions
+                </a>
+
+                <a href="reports.html" class="menu-item">
+                    <span>▧</span>
+                    Reports
+                </a>
+
+                <p class="menu-heading secondary-heading">SYSTEM</p>
+
+                <a href="#" class="menu-item">
+                    <span>⚙</span>
+                    Settings
+                </a>
+
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-status"></div>
+                <span>System Preview</span>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div class="page-heading">
+                    <p>ANALYTICS</p>
+                    <h1>Cost Analysis</h1>
+                </div>
+
+                <div class="topbar-right">
+
+                    <span class="preview-label">DEMO PREVIEW</span>
+
+                    <div class="profile">
+                        <div class="profile-avatar">A</div>
+
+                        <div class="profile-info">
+                            <h4>Administrator</h4>
+                            <span>Project Analyst</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- INTRODUCTION -->
+
+            <section class="cost-welcome">
+
+                <div>
+                    <p class="welcome-label">
+                        FINANCIAL INTELLIGENCE
+                    </p>
+
+                    <h2>Understanding Acquisition Costs.</h2>
+
+                    <p>
+                        Examine budget allocations, actual expenditure
+                        and cost overruns across defence acquisition projects.
+                    </p>
+                </div>
+
+                <div class="cost-welcome-icon">₹</div>
+
+            </section>
+
+
+            <!-- COST SUMMARY CARDS -->
+
+            <section class="cost-stats">
+
+                <div class="cost-stat-card">
+                    <span>Total Initial Budget</span>
+                    <h2>₹ 1,250 Cr</h2>
+                    <p>Illustrative sample data</p>
+                </div>
+
+                <div class="cost-stat-card">
+                    <span>Total Actual Cost</span>
+                    <h2>₹ 1,470 Cr</h2>
+                    <p>Illustrative sample data</p>
+                </div>
+
+                <div class="cost-stat-card">
+                    <span>Total Cost Overrun</span>
+                    <h2>₹ 220 Cr</h2>
+                    <p>Actual cost minus initial budget</p>
+                </div>
+
+                <div class="cost-stat-card">
+                    <span>Average Overrun</span>
+                    <h2>17.6%</h2>
+                    <p>Illustrative sample metric</p>
+                </div>
+
+            </section>
+
+
+            <!-- COST COMPARISON CHART -->
+
+            <section class="cost-chart-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Budget vs Actual Expenditure</h2>
+                        <p>Comparison across acquisition projects</p>
+                    </div>
+
+                    <span class="chart-tag">SAMPLE DATA</span>
+                </div>
+
+                <div class="cost-chart-card">
+                    <div class="cost-chart-container">
+                        <canvas id="budgetChart"></canvas>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- CATEGORY ANALYSIS -->
+
+            <section class="category-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Cost Distribution</h2>
+                        <p>Illustrative expenditure across project categories</p>
+                    </div>
+                </div>
+
+                <div class="category-grid">
+
+                    <div class="category-chart-card">
+
+                        <h3>Category-wise Budget Allocation</h3>
+
+                        <div class="category-chart-container">
+                            <canvas id="categoryChart"></canvas>
+                        </div>
+
+                    </div>
+
+
+                    <div class="category-info-card">
+
+                        <h3>Cost Overrun Formula</h3>
+
+                        <p>
+                            Cost overrun measures the percentage by which
+                            the actual project cost exceeds the initial budget.
+                        </p>
+
+                        <div class="formula-box">
+                            <p>Cost Overrun (%) =</p>
+
+                            <strong>
+                                [(Actual Cost − Initial Budget)
+                                / Initial Budget] × 100
+                            </strong>
+                        </div>
+
+                        <div class="formula-example">
+                            <span>Example</span>
+
+                            <p>Initial Budget: ₹ 500 Cr</p>
+                            <p>Actual Cost: ₹ 620 Cr</p>
+
+                            <h2>24% Overrun</h2>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROJECT COST TABLE -->
+
+            <section class="cost-table-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Project Cost Breakdown</h2>
+                        <p>Illustrative acquisition cost records</p>
+                    </div>
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>PROJECT</th>
+                                <th>INITIAL BUDGET</th>
+                                <th>ACTUAL COST</th>
+                                <th>COST DIFFERENCE</th>
+                                <th>OVERRUN</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Aircraft Modernisation</td>
+                                <td>₹ 500 Cr</td>
+                                <td>₹ 620 Cr</td>
+                                <td>₹ 120 Cr</td>
+                                <td class="overrun">24%</td>
+                            </tr>
+
+                            <tr>
+                                <td>Naval Systems Upgrade</td>
+                                <td>₹ 320 Cr</td>
+                                <td>₹ 350 Cr</td>
+                                <td>₹ 30 Cr</td>
+                                <td class="overrun">9.4%</td>
+                            </tr>
+
+                            <tr>
+                                <td>Defence Communication</td>
+                                <td>₹ 180 Cr</td>
+                                <td>₹ 185 Cr</td>
+                                <td>₹ 5 Cr</td>
+                                <td class="overrun">2.8%</td>
+                            </tr>
+
+                            <tr>
+                                <td>Radar Development</td>
+                                <td>₹ 250 Cr</td>
+                                <td>₹ 315 Cr</td>
+                                <td>₹ 65 Cr</td>
+                                <td class="overrun">26%</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer class="dashboard-footer">
+
+                <p>© 2026 Defence Acquisition Intelligence</p>
+
+                <p>Academic Project | Cost Analysis Preview</p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- CHART JAVASCRIPT -->
+
+    <script>
+
+        // Budget vs Actual Cost Chart
+
+        new Chart(document.getElementById("budgetChart"), {
+
+            type: "bar",
+
+            data: {
+
+                labels: [
+                    "Aircraft",
+                    "Naval",
+                    "Communication",
+                    "Radar"
+                ],
+
+                datasets: [
+
+                    {
+                        label: "Initial Budget",
+                        data: [500, 320, 180, 250],
+                        backgroundColor: "#55a8f0",
+                        borderRadius: 5
+                    },
+
+                    {
+                        label: "Actual Cost",
+                        data: [620, 350, 185, 315],
+                        backgroundColor: "#d6a84b",
+                        borderRadius: 5
+                    }
+
+                ]
+
+            },
+
+            options: {
+
+                responsive: true,
+                maintainAspectRatio: false,
+
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: "#aebbd0"
+                        }
+                    }
+                },
+
+                scales: {
+
+                    x: {
+                        ticks: {
+                            color: "#aebbd0"
+                        },
+                        grid: {
+                            display: false
+                        }
+                    },
+
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: "#aebbd0"
+                        },
+                        grid: {
+                            color: "rgba(255,255,255,0.07)"
+                        }
+                    }
+
+                }
+
+            }
+
+        });
+
+
+        // Category-wise Budget Allocation Chart
+
+        new Chart(document.getElementById("categoryChart"), {
+
+            type: "doughnut",
+
+            data: {
+
+                labels: [
+                    "Aerospace",
+                    "Naval",
+                    "Technology",
+                    "Electronics"
+                ],
+
+                datasets: [{
+
+                    data: [500, 320, 180, 250],
+
+                    backgroundColor: [
+                        "#55a8f0",
+                        "#d6a84b",
+                        "#ef6262",
+                        "#55c7a5"
+                    ],
+
+                    borderWidth: 0
+
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+                maintainAspectRatio: false,
+
+                plugins: {
+                    legend: {
+                        position: "bottom",
+                        labels: {
+                            color: "#aebbd0",
+                            padding: 18
+                        }
+                    }
+                }
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,639 @@
+
+/* ==========================================
+   DEFENCE ACQUISITION INTELLIGENCE
+   DASHBOARD STYLESHEET
+========================================== */
+
+
+/* 1. GLOBAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #081426;
+    --navy-light: #10223a;
+    --navy-card: #11243d;
+    --blue: #55a8f0;
+    --gold: #d6a84b;
+    --white: #ffffff;
+    --text: #e8edf5;
+    --muted: #9aa9bd;
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--navy);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+
+/* 2. MAIN DASHBOARD LAYOUT */
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* 3. SIDEBAR */
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: #0b192c;
+    border-right: 1px solid var(--border);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 8px 38px;
+}
+
+.logo-icon {
+    width: 43px;
+    height: 43px;
+    background: linear-gradient(135deg, var(--gold), #a97b2d);
+    color: var(--navy);
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.sidebar-logo h2 {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.sidebar-logo span {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.menu-heading {
+    color: #71829a;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    font-weight: 700;
+    margin: 12px 10px 15px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 14px;
+    margin-bottom: 7px;
+    text-decoration: none;
+    color: #9aa9bd;
+    font-size: 13px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.menu-item span {
+    font-size: 19px;
+    width: 22px;
+    text-align: center;
+}
+
+.menu-item:hover {
+    background: rgba(85, 168, 240, 0.1);
+    color: var(--white);
+}
+
+.menu-item.active {
+    background: rgba(85, 168, 240, 0.14);
+    color: var(--blue);
+    border-left: 3px solid var(--blue);
+}
+
+.secondary-heading {
+    margin-top: 35px;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding: 18px 10px 0;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.sidebar-status {
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+}
+
+
+/* 4. MAIN CONTENT */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 30px 38px;
+}
+
+
+/* 5. TOP NAVIGATION */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.page-heading p {
+    color: var(--blue);
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.page-heading h1 {
+    font-size: 27px;
+    font-weight: 650;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.preview-label {
+    color: var(--gold);
+    border: 1px solid rgba(214, 168, 75, 0.35);
+    background: rgba(214, 168, 75, 0.08);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.profile-avatar {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), #28649b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+}
+
+.profile-info h4 {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.profile-info span {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+
+/* 6. WELCOME SECTION */
+
+.welcome-section {
+    background:
+        linear-gradient(
+            110deg,
+            rgba(16, 34, 58, 0.98),
+            rgba(17, 48, 77, 0.88)
+        );
+
+    border: 1px solid rgba(85, 168, 240, 0.16);
+    border-radius: 13px;
+    padding: 30px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    overflow: hidden;
+}
+
+.welcome-label {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.welcome-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.welcome-section p:last-child {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.welcome-icon {
+    font-size: 75px;
+    color: rgba(214, 168, 75, 0.3);
+    padding-right: 20px;
+}
+
+
+/* 7. SECTION HEADINGS */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* 8. STATISTICS CARDS */
+
+.stats-section {
+    margin-bottom: 38px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.stat-card {
+    background: var(--navy-card);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    padding: 21px;
+    transition: 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(85, 168, 240, 0.35);
+}
+
+.stat-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 11px;
+    gap: 8px;
+}
+
+.stat-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+
+.stat-icon.blue {
+    color: var(--blue);
+    background: rgba(85, 168, 240, 0.12);
+}
+
+.stat-icon.gold {
+    color: var(--gold);
+    background: rgba(214, 168, 75, 0.12);
+}
+
+.stat-icon.red {
+    color: #ef6262;
+    background: rgba(239, 98, 98, 0.12);
+}
+
+.stat-icon.green {
+    color: #48c78e;
+    background: rgba(72, 199, 142, 0.12);
+}
+
+.stat-card h2 {
+    font-size: 29px;
+    margin: 19px 0 8px;
+    font-weight: 650;
+}
+
+.stat-description {
+    color: #8495ab;
+    font-size: 10px;
+}
+
+
+/* 9. ANALYTICS SECTION */
+
+.analytics-section {
+    margin-bottom: 38px;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 18px;
+}
+
+.chart-card {
+    background: var(--navy-card);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    padding: 22px;
+    min-width: 0;
+}
+
+.chart-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.chart-heading h3 {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.chart-heading p {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.chart-tag {
+    color: var(--gold);
+    font-size: 8px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(214, 168, 75, 0.25);
+    padding: 6px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.chart-container {
+    height: 260px;
+    position: relative;
+    width: 100%;
+}
+
+.doughnut-container {
+    max-width: 310px;
+    margin: 0 auto;
+}
+
+
+/* 10. PROJECTS TABLE */
+
+.projects-section {
+    margin-bottom: 35px;
+}
+
+.view-all {
+    color: var(--blue);
+    font-size: 11px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.view-all:hover {
+    color: var(--gold);
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    background: var(--navy-card);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+thead {
+    background: rgba(255, 255, 255, 0.025);
+}
+
+th {
+    color: #8495ab;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-align: left;
+    padding: 17px 20px;
+    font-weight: 700;
+}
+
+td {
+    padding: 17px 20px;
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    color: #cbd5e2;
+}
+
+tbody tr {
+    transition: 0.2s ease;
+}
+
+tbody tr:hover {
+    background: rgba(85, 168, 240, 0.045);
+}
+
+.overrun {
+    color: #ef7777;
+    font-weight: 700;
+}
+
+.under-run {
+    color: #48c78e;
+    font-weight: 700;
+}
+
+.risk {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.risk.high {
+    color: #ef7777;
+    background: rgba(239, 98, 98, 0.12);
+}
+
+.risk.medium {
+    color: var(--gold);
+    background: rgba(214, 168, 75, 0.12);
+}
+
+.risk.low {
+    color: #48c78e;
+    background: rgba(72, 199, 142, 0.12);
+}
+
+
+/* 11. FOOTER */
+
+.dashboard-footer {
+    border-top: 1px solid var(--border);
+    padding: 20px 0 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #71829a;
+    font-size: 10px;
+}
+
+
+/* 12. RESPONSIVE DESIGN */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 75px;
+        padding: 25px 10px;
+    }
+
+    .sidebar-logo {
+        justify-content: center;
+        padding: 0 0 35px;
+    }
+
+    .sidebar-logo > div:last-child,
+    .menu-heading,
+    .menu-item:not(.active),
+    .menu-item.active {
+        font-size: 0;
+    }
+
+    .menu-item {
+        justify-content: center;
+        padding: 13px 5px;
+    }
+
+    .menu-item span {
+        font-size: 20px;
+    }
+
+    .sidebar-bottom {
+        justify-content: center;
+        padding: 15px 0 0;
+    }
+
+    .sidebar-bottom span {
+        display: none;
+    }
+
+    .main-content {
+        padding: 25px 20px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .main-content {
+        padding: 20px 13px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .topbar-right {
+        gap: 10px;
+    }
+
+    .preview-label {
+        display: none;
+    }
+
+    .profile-info {
+        display: none;
+    }
+
+    .welcome-section {
+        padding: 23px 20px;
+    }
+
+    .welcome-section h2 {
+        font-size: 19px;
+    }
+
+    .welcome-icon {
+        font-size: 45px;
+        padding: 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-card {
+        padding: 16px;
+    }
+
+    .dashboard-footer {
+        flex-direction: column;
+    }
+
+}
