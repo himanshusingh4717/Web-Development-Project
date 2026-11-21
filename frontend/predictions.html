@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions | Defence Acquisition Intelligence</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/predictions.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <h2>DAI<span>.</span></h2>
+                <p>DEFENCE INTELLIGENCE</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="projects.html">Projects</a>
+                <a href="cost-analysis.html">Cost Analysis</a>
+                <a href="predictions.html" class="active">Predictions</a>
+                <a href="reports.html">Reports</a>
+                <a href="#">Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Defence Acquisition Intelligence</p>
+                <span>Version 1.0</span>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <div>
+                    <h3>Cost Predictions</h3>
+                    <p>Predictive Acquisition Intelligence</p>
+                </div>
+
+                <div class="topbar-right">
+                    <span class="demo-badge">DEMO PREVIEW</span>
+                    <div class="admin-profile">
+                        <div class="admin-avatar">A</div>
+                        <div>
+                            <strong>Administrator</strong>
+                            <small>Project Analyst</small>
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- PAGE INTRODUCTION -->
+            <section class="prediction-welcome">
+
+                <div>
+                    <span class="section-label">MACHINE LEARNING MODULE</span>
+
+                    <h1>Predict Acquisition Costs</h1>
+
+                    <p>
+                        Evaluate proposed defence acquisition projects
+                        and estimate their potential cost-overrun risk
+                        using project characteristics.
+                    </p>
+                </div>
+
+                <div class="prediction-icon">↗</div>
+
+            </section>
+
+
+            <!-- PREDICTION FORM SECTION -->
+            <section class="prediction-layout">
+
+                <div class="prediction-form-card">
+
+                    <div class="section-heading">
+                        <div>
+                            <h2>Project Information</h2>
+                            <p>Enter the details of the proposed project.</p>
+                        </div>
+                    </div>
+
+
+                    <form id="predictionForm">
+
+                        <div class="form-grid">
+
+                            <!-- PROJECT NAME -->
+                            <div class="form-group">
+                                <label for="projectName">Project Name</label>
+                                <input
+                                    type="text"
+                                    id="projectName"
+                                    placeholder="Enter project name"
+                                    required>
+                            </div>
+
+
+                            <!-- PROJECT CATEGORY -->
+                            <div class="form-group">
+                                <label for="projectCategory">Project Category</label>
+
+                                <select id="projectCategory" required>
+                                    <option value="">Select category</option>
+                                    <option value="Aerospace">Aerospace</option>
+                                    <option value="Naval">Naval Systems</option>
+                                    <option value="Electronics">Electronics</option>
+                                    <option value="Technology">Technology</option>
+                                    <option value="Land Systems">Land Systems</option>
+                                </select>
+                            </div>
+
+
+                            <!-- INITIAL BUDGET -->
+                            <div class="form-group">
+                                <label for="initialBudget">
+                                    Initial Budget (₹ Crores)
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="initialBudget"
+                                    placeholder="Example: 500"
+                                    min="1"
+                                    required>
+                            </div>
+
+
+                            <!-- EXPECTED DURATION -->
+                            <div class="form-group">
+                                <label for="duration">
+                                    Expected Duration (Years)
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="duration"
+                                    placeholder="Example: 5"
+                                    min="1"
+                                    required>
+                            </div>
+
+
+                            <!-- TECHNOLOGY COMPLEXITY -->
+                            <div class="form-group">
+                                <label for="complexity">
+                                    Technology Complexity
+                                </label>
+
+                                <select id="complexity" required>
+                                    <option value="">Select complexity</option>
+                                    <option value="Low">Low</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="High">High</option>
+                                </select>
+                            </div>
+
+
+                            <!-- CONTRACTOR SIZE -->
+                            <div class="form-group">
+                                <label for="contractorSize">
+                                    Contractor Size
+                                </label>
+
+                                <select id="contractorSize" required>
+                                    <option value="">Select contractor size</option>
+                                    <option value="Small">Small</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Large">Large</option>
+                                </select>
+                            </div>
+
+
+                            <!-- CONTRACT TYPE -->
+                            <div class="form-group full-width">
+                                <label for="contractType">Contract Type</label>
+
+                                <select id="contractType" required>
+                                    <option value="">Select contract type</option>
+                                    <option value="Fixed Price">Fixed Price</option>
+                                    <option value="Cost Plus">Cost Plus</option>
+                                    <option value="Time and Materials">
+                                        Time and Materials
+                                    </option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                        <button type="submit" class="prediction-button">
+                            Generate Prediction →
+                        </button>
+
+                        <p class="form-note">
+                            Prediction functionality will be connected
+                            to the trained ML model in a later stage.
+                        </p>
+
+                    </form>
+
+                </div>
+
+
+                <!-- RESULT PANEL -->
+                <div class="prediction-result-card">
+
+                    <div class="result-heading">
+                        <span class="result-icon">◎</span>
+                        <div>
+                            <h2>Prediction Results</h2>
+                            <p>Model-generated analysis</p>
+                        </div>
+                    </div>
+
+
+                    <div class="result-placeholder">
+
+                        <div class="placeholder-icon">📊</div>
+
+                        <h3>Awaiting Project Data</h3>
+
+                        <p>
+                            Enter the project details and generate a
+                            prediction once the machine learning model
+                            is connected.
+                        </p>
+
+                    </div>
+
+
+                    <div class="result-info">
+
+                        <h4>What will this module analyse?</h4>
+
+                        <ul>
+                            <li>Estimated cost overrun percentage</li>
+                            <li>Potential financial risk category</li>
+                            <li>Important factors influencing the estimate</li>
+                            <li>Estimated final project cost</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- HOW IT WORKS -->
+            <section class="prediction-process">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>How Prediction Works</h2>
+                        <p>Our planned machine learning workflow.</p>
+                    </div>
+                </div>
+
+                <div class="process-grid">
+
+                    <div class="process-card">
+                        <span>01</span>
+                        <h3>Input Data</h3>
+                        <p>Provide the proposed project's characteristics.</p>
+                    </div>
+
+                    <div class="process-card">
+                        <span>02</span>
+                        <h3>ML Analysis</h3>
+                        <p>The trained model analyses historical project patterns.</p>
+                    </div>
+
+                    <div class="process-card">
+                        <span>03</span>
+                        <h3>Risk Estimation</h3>
+                        <p>Estimate possible cost overruns and financial risks.</p>
+                    </div>
+
+                    <div class="process-card">
+                        <span>04</span>
+                        <h3>View Results</h3>
+                        <p>Display the estimated cost and prediction insights.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <footer class="dashboard-footer">
+                <p>© 2026 Defence Acquisition Intelligence. Academic Project Demo.</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

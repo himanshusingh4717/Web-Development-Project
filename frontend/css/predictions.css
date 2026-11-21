@@ -1,317 +1,343 @@
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Predictions | Defence Acquisition Intelligence</title>
-
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/predictions.css">
-</head>
-
-<body>
-
-    <div class="dashboard-container">
-
-        <!-- SIDEBAR -->
-        <aside class="sidebar">
-
-            <div class="sidebar-logo">
-                <h2>DAI<span>.</span></h2>
-                <p>DEFENCE INTELLIGENCE</p>
-            </div>
-
-            <nav class="sidebar-nav">
-                <a href="dashboard.html">Dashboard</a>
-                <a href="projects.html">Projects</a>
-                <a href="cost-analysis.html">Cost Analysis</a>
-                <a href="predictions.html" class="active">Predictions</a>
-                <a href="reports.html">Reports</a>
-                <a href="#">Settings</a>
-            </nav>
-
-            <div class="sidebar-footer">
-                <p>Defence Acquisition Intelligence</p>
-                <span>Version 1.0</span>
-            </div>
-
-        </aside>
-
-
-        <!-- MAIN CONTENT -->
-        <main class="main-content">
-
-            <!-- TOPBAR -->
-            <header class="topbar">
-
-                <div>
-                    <h3>Cost Predictions</h3>
-                    <p>Predictive Acquisition Intelligence</p>
-                </div>
-
-                <div class="topbar-right">
-                    <span class="demo-badge">DEMO PREVIEW</span>
-                    <div class="admin-profile">
-                        <div class="admin-avatar">A</div>
-                        <div>
-                            <strong>Administrator</strong>
-                            <small>Project Analyst</small>
-                        </div>
-                    </div>
-                </div>
-
-            </header>
-
-
-            <!-- PAGE INTRODUCTION -->
-            <section class="prediction-welcome">
-
-                <div>
-                    <span class="section-label">MACHINE LEARNING MODULE</span>
-
-                    <h1>Predict Acquisition Costs</h1>
-
-                    <p>
-                        Evaluate proposed defence acquisition projects
-                        and estimate their potential cost-overrun risk
-                        using project characteristics.
-                    </p>
-                </div>
-
-                <div class="prediction-icon">↗</div>
-
-            </section>
-
-
-            <!-- PREDICTION FORM SECTION -->
-            <section class="prediction-layout">
-
-                <div class="prediction-form-card">
-
-                    <div class="section-heading">
-                        <div>
-                            <h2>Project Information</h2>
-                            <p>Enter the details of the proposed project.</p>
-                        </div>
-                    </div>
-
-
-                    <form id="predictionForm">
-
-                        <div class="form-grid">
-
-                            <!-- PROJECT NAME -->
-                            <div class="form-group">
-                                <label for="projectName">Project Name</label>
-                                <input
-                                    type="text"
-                                    id="projectName"
-                                    placeholder="Enter project name"
-                                    required>
-                            </div>
-
-
-                            <!-- PROJECT CATEGORY -->
-                            <div class="form-group">
-                                <label for="projectCategory">Project Category</label>
-
-                                <select id="projectCategory" required>
-                                    <option value="">Select category</option>
-                                    <option value="Aerospace">Aerospace</option>
-                                    <option value="Naval">Naval Systems</option>
-                                    <option value="Electronics">Electronics</option>
-                                    <option value="Technology">Technology</option>
-                                    <option value="Land Systems">Land Systems</option>
-                                </select>
-                            </div>
-
-
-                            <!-- INITIAL BUDGET -->
-                            <div class="form-group">
-                                <label for="initialBudget">
-                                    Initial Budget (₹ Crores)
-                                </label>
-
-                                <input
-                                    type="number"
-                                    id="initialBudget"
-                                    placeholder="Example: 500"
-                                    min="1"
-                                    required>
-                            </div>
-
-
-                            <!-- EXPECTED DURATION -->
-                            <div class="form-group">
-                                <label for="duration">
-                                    Expected Duration (Years)
-                                </label>
-
-                                <input
-                                    type="number"
-                                    id="duration"
-                                    placeholder="Example: 5"
-                                    min="1"
-                                    required>
-                            </div>
-
-
-                            <!-- TECHNOLOGY COMPLEXITY -->
-                            <div class="form-group">
-                                <label for="complexity">
-                                    Technology Complexity
-                                </label>
-
-                                <select id="complexity" required>
-                                    <option value="">Select complexity</option>
-                                    <option value="Low">Low</option>
-                                    <option value="Medium">Medium</option>
-                                    <option value="High">High</option>
-                                </select>
-                            </div>
-
-
-                            <!-- CONTRACTOR SIZE -->
-                            <div class="form-group">
-                                <label for="contractorSize">
-                                    Contractor Size
-                                </label>
-
-                                <select id="contractorSize" required>
-                                    <option value="">Select contractor size</option>
-                                    <option value="Small">Small</option>
-                                    <option value="Medium">Medium</option>
-                                    <option value="Large">Large</option>
-                                </select>
-                            </div>
-
-
-                            <!-- CONTRACT TYPE -->
-                            <div class="form-group full-width">
-                                <label for="contractType">Contract Type</label>
-
-                                <select id="contractType" required>
-                                    <option value="">Select contract type</option>
-                                    <option value="Fixed Price">Fixed Price</option>
-                                    <option value="Cost Plus">Cost Plus</option>
-                                    <option value="Time and Materials">
-                                        Time and Materials
-                                    </option>
-                                </select>
-                            </div>
-
-                        </div>
-
-
-                        <button type="submit" class="prediction-button">
-                            Generate Prediction →
-                        </button>
-
-                        <p class="form-note">
-                            Prediction functionality will be connected
-                            to the trained ML model in a later stage.
-                        </p>
-
-                    </form>
-
-                </div>
-
-
-                <!-- RESULT PANEL -->
-                <div class="prediction-result-card">
-
-                    <div class="result-heading">
-                        <span class="result-icon">◎</span>
-                        <div>
-                            <h2>Prediction Results</h2>
-                            <p>Model-generated analysis</p>
-                        </div>
-                    </div>
-
-
-                    <div class="result-placeholder">
-
-                        <div class="placeholder-icon">📊</div>
-
-                        <h3>Awaiting Project Data</h3>
-
-                        <p>
-                            Enter the project details and generate a
-                            prediction once the machine learning model
-                            is connected.
-                        </p>
-
-                    </div>
-
-
-                    <div class="result-info">
-
-                        <h4>What will this module analyse?</h4>
-
-                        <ul>
-                            <li>Estimated cost overrun percentage</li>
-                            <li>Potential financial risk category</li>
-                            <li>Important factors influencing the estimate</li>
-                            <li>Estimated final project cost</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- HOW IT WORKS -->
-            <section class="prediction-process">
-
-                <div class="section-heading">
-                    <div>
-                        <h2>How Prediction Works</h2>
-                        <p>Our planned machine learning workflow.</p>
-                    </div>
-                </div>
-
-                <div class="process-grid">
-
-                    <div class="process-card">
-                        <span>01</span>
-                        <h3>Input Data</h3>
-                        <p>Provide the proposed project's characteristics.</p>
-                    </div>
-
-                    <div class="process-card">
-                        <span>02</span>
-                        <h3>ML Analysis</h3>
-                        <p>The trained model analyses historical project patterns.</p>
-                    </div>
-
-                    <div class="process-card">
-                        <span>03</span>
-                        <h3>Risk Estimation</h3>
-                        <p>Estimate possible cost overruns and financial risks.</p>
-                    </div>
-
-                    <div class="process-card">
-                        <span>04</span>
-                        <h3>View Results</h3>
-                        <p>Display the estimated cost and prediction insights.</p>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <footer class="dashboard-footer">
-                <p>© 2026 Defence Acquisition Intelligence. Academic Project Demo.</p>
-            </footer>
-
-        </main>
-
-    </div>
-
-</body>
-</html>
+/* ==========================================
+   DEFENCE ACQUISITION INTELLIGENCE
+   PREDICTIONS PAGE STYLES
+========================================== */
+
+
+/* 1. PAGE INTRODUCTION */
+
+.prediction-welcome {
+    background: linear-gradient(120deg, #10223a, #17385a);
+    border: 1px solid rgba(85, 168, 240, 0.2);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-label {
+    color: #d6a84b;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.prediction-welcome h1 {
+    color: #ffffff;
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.prediction-welcome p {
+    color: #aabbd0;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.prediction-icon {
+    font-size: 65px;
+    color: #d6a84b;
+    font-weight: 300;
+}
+
+
+/* 2. PREDICTION LAYOUT */
+
+.prediction-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.prediction-form-card,
+.prediction-result-card {
+    background: #10223a;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    padding: 26px;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    color: #ffffff;
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.section-heading p {
+    color: #91a4ba;
+    font-size: 13px;
+}
+
+
+/* 3. FORM GRID */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: #c7d3e1;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 13px 14px;
+    background: #081426;
+    border: 1px solid #263d57;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 13px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #71849a;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #55a8f0;
+    box-shadow: 0 0 0 2px rgba(85, 168, 240, 0.12);
+}
+
+
+/* 4. PREDICTION BUTTON */
+
+.prediction-button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background: linear-gradient(90deg, #d6a84b, #edc66d);
+    border: none;
+    border-radius: 8px;
+    color: #081426;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.prediction-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(214, 168, 75, 0.2);
+}
+
+.form-note {
+    color: #8195ab;
+    font-size: 11px;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 13px;
+}
+
+
+/* 5. RESULT PANEL */
+
+.result-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 25px;
+}
+
+.result-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(85, 168, 240, 0.12);
+    color: #55a8f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.result-heading h2 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.result-heading p {
+    color: #91a4ba;
+    font-size: 12px;
+}
+
+.result-placeholder {
+    background: #081426;
+    border: 1px dashed #314b68;
+    border-radius: 12px;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.placeholder-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.result-placeholder h3 {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.result-placeholder p {
+    color: #91a4ba;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.result-info {
+    margin-top: 25px;
+}
+
+.result-info h4 {
+    color: #d6a84b;
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+
+.result-info ul {
+    list-style: none;
+}
+
+.result-info li {
+    color: #b4c3d3;
+    font-size: 12px;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.result-info li::before {
+    content: "✓";
+    color: #55a8f0;
+    margin-right: 10px;
+}
+
+
+/* 6. HOW PREDICTION WORKS */
+
+.prediction-process {
+    margin-bottom: 30px;
+}
+
+.prediction-process .section-heading {
+    margin-bottom: 20px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.process-card {
+    background: #10223a;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 13px;
+    padding: 22px;
+    transition: 0.3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(85, 168, 240, 0.4);
+}
+
+.process-card span {
+    display: inline-block;
+    color: #d6a84b;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+
+.process-card h3 {
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.process-card p {
+    color: #91a4ba;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* 7. RESPONSIVE DESIGN */
+
+@media (max-width: 1100px) {
+
+    .prediction-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .prediction-welcome {
+        padding: 22px;
+    }
+
+    .prediction-welcome h1 {
+        font-size: 21px;
+    }
+
+    .prediction-icon {
+        font-size: 40px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prediction-form-card,
+    .prediction-result-card {
+        padding: 19px;
+    }
+
+}
